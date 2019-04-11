@@ -1,0 +1,236 @@
+
+.contain{
+
+  padding: 14px;
+  height: 100vh;
+}
+
+.box {
+  height: 70%;
+  padding: 0;
+  margin-top: 20%;
+  bottom: 10px;
+}
+
+ .pato{
+   background-color: #ffffff59;
+ }
+.nbot{
+  border-bottom: none !important;
+}
+
+.nright{
+  border-right: none !important;
+}
+
+.nleft{
+  border-left: none !important;
+}
+
+.yleft{
+  border-left: 1px solid;
+}
+.subbox-c1{
+  background-color: #f1b175;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+.subbox-c1:hover{
+  background-color: #f6cda6;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subbox-c2{
+  background-color: #f9d579;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+.subbox-c2:hover{
+  background-color: #fbe4a9;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.subbox-middle{
+  background-color: #e5fb75;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+.subbox-middle:hover{
+  background-color: #eefca7;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subbox-g-nometal{
+  background-color: #7ef58c;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+
+.subbox-g-nometal:hover{
+  background-color: #acf8b5;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subbox-y-nometal{
+  background-color: #f5ee7b;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+
+.subbox-y-nometal:hover{
+  background-color: #f8f4aa;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subbox-v-nometal{
+  background-color: #a287f7;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+.subbox-v-nometal:hover{
+  background-color: #cec0fb;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subbox-p-nometal{
+  background-color: #fa8fff;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+.subbox-p-nometal:hover{
+  background-color: #fbb7ff;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subbox-gn{
+  background-color: #83d0ef;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+}
+
+.subbox-gn:hover{
+  background-color: #aee0f4;
+  border: 1px solid;
+  height: 14.2%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.subbox-a {
+  border: 1px solid;
+  background-color: red;
+  height: 14.2%;
+  width: 100%;
+
+}
+
+.subbox-b {
+  border: 1px solid;
+  background-color: blue;
+  height: 14.2%;
+  width: 100%;
+}
+
+.subbox-h {
+  background-color: white;
+  height: 14.2%;
+  width: 100%;
+}
+
+.masa-atomica{
+  font-size: 6px;
+  width: 100%;
+  padding: 0 !important;
+  margin-top: 5px;
+  margin-left: 2px
+}
+
+.ionizacion{
+  font-size: 4px;
+  margin-left: 2px !important;
+}
+
+.num-atomico{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 15px
+}
+
+.elem{
+  width: 100%;
+  padding: 0 !important;
+  margin: 0;
+}
+.celem{
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.simbol{
+  font-size: 17px;
+  padding: 0 !important;
+  display: block;
+}
+
+.name{
+  font-size: 6px;
+  padding: 0 !important;
+  display: block;
+}
+
+.foto{
+  height: 85vh;
+}
+
+.nobut{
+  background-color: none;
+  border: 0px;
+}
+.mymodal{
+  width: 100vw;
+  margin: 0;
+  background-color: black;
+}
+
+.elemfoto{
+  border: 3px solid !important;
+  border-color: #ff000057 !important;
+}
