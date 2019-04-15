@@ -1,5 +1,5 @@
 var foto = ['6.jpg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpg', '2.jpeg', '4.jpeg', '6.jpg', '2.jpeg', '5.jpg', '6.jpg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpg', '2.jpeg', '4.jpeg', '6.jpg', '2.jpeg', '5.jpg',]
-
+    console.log(cels)
 function drawCols() {
   let html_ = ''
   let modal = ''
@@ -14,6 +14,8 @@ function drawCols() {
       col++;
       html_ = ""
     }
+
+    console.log(type[i])
     if(cels[type[i]].match(/elemfoto/)){
       html_ += drawFotoCel(cels[type[i]], masa[i], ion[i], electro[i], numero[i], simbol[i], name[i], fotoCount)
       modal += createModal(fotoCount)
