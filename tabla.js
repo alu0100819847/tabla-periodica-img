@@ -111,8 +111,10 @@ function playDiapo(){
 }
 
 function nextImg(){
-  $('.diapositivas')[0].innerHTML = '<img class="diapofoto" src="'+foto[pos%foto.length]+'"></img>'
-  pos++;
+  if(pos < foto.length){
+    $('.diapositivas')[0].innerHTML = '<img class="diapofoto" src="'+foto[pos%foto.length]+'"></img>'
+    pos++;
+  }
 }
 
 function closeDiapo(){
@@ -125,7 +127,7 @@ function closeDiapo(){
 
 $('#diapo').on('hidden.bs.modal', function (e) {
   closeDiapo()
-  $('.diapositivas')[0].innerHTML = ''
+  $('.diapositivas')[0].innerHTML = '<h1 class="initTitle">ALEGRIA</h1>'
   clearInterval(diapCall);
 })
 

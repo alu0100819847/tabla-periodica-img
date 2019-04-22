@@ -292,3 +292,20 @@ body {
   color: white;
   height: 95vh;
 }
+
+.playButton{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.playButton:hover{
+  background-color: #f9fbe769;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  margin: 10px;
+  font-size: 30px;
+}
