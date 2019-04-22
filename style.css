@@ -286,3 +286,9 @@ body {
   height: 6.36vh;
   width: 100%;
 }
+
+.initTitle{
+  font-size: 30px;
+  color: white;
+  height: 95vh;
+}
