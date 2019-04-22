@@ -12,6 +12,7 @@
     <title>Tabla Periódica</title>
   </head>
   <body>
+        <button onclick="playDiapo()" data-toggle="modal" data-target="#diapo">Play</button>
     <div class="container">
       <div class="row">
         <div class="col-sm row contain"></div>
@@ -19,6 +20,19 @@
       </div>
     </div>
     <div class="modal-l"></div>
+
+    <div class="modal fade" id="diapo" tabindex="-1" role="dialog" aria-labelledby="diapo" aria-hidden="true">
+              <div class="modal-dialog mymodal" role="document">
+                <div class="modal-content mymodal">
+                  <div class="modal-body diapositivas" align="center">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+      <audio id="music">
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
     <script src="data.js"></script>
     <script src="tabla.js"></script>
   </body>

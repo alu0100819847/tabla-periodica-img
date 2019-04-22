@@ -1,5 +1,7 @@
 var foto = ['6.jpg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpg', '2.jpeg', '4.jpeg', '6.jpg', '2.jpeg', '5.jpg', '6.jpg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpg', '2.jpeg', '4.jpeg', '6.jpg', '2.jpeg', '5.jpg',]
-    console.log(cels)
+var pos = 0;
+var diapCall
+
 function drawCols() {
   let html_ = ''
   let modal = ''
@@ -15,7 +17,6 @@ function drawCols() {
       html_ = ""
     }
 
-    console.log(type[i])
     if(cels[type[i]].match(/elemfoto/)){
       html_ += drawFotoCel(cels[type[i]], masa[i], ion[i], electro[i], numero[i], simbol[i], name[i], fotoCount)
       modal += createModal(fotoCount)
@@ -27,8 +28,8 @@ function drawCols() {
   $('.box')[col].innerHTML = html_
   $('.modal-l')[0].innerHTML = modal
 
-  for(var i = 0; i< $('.modal-body').length; i++){
-    $('.modal-body')[i].innerHTML = '<img class="foto" src="'+foto[i]+'"></img>'
+  for(var i = 0; i< $('.modal-img').length; i++){
+    $('.modal-img')[i].innerHTML = '<img class="foto" src="'+foto[i]+'"></img>'
   }
 }
 
@@ -88,7 +89,7 @@ function createModal(fotoC){
   return '<div class="modal fade" id="foto-'+fotoC+'" tabindex="-1" role="dialog" aria-labelledby="foto '+fotoC+'" aria-hidden="true">'+
             '<div class="modal-dialog mymodal" role="document">'+
               '<div class="modal-content mymodal">'+
-                '<div class="modal-body" align="center">'+
+                '<div class="modal-body modal-img" align="center">'+
                 '</div>'+
                 '<div class="modal-footer">'+
                   '<button type="button" class="nobut" data-toggle="modal" data-target="#foto-'+prev+'" data-dismiss="modal"><i class="fas fa-backward"></i></button>'+
@@ -98,5 +99,34 @@ function createModal(fotoC){
             '</div>'+
           '</div>';
 }
+
+function playDiapo(){
+  music.play()
+  setTimeout(() => {closeDiapo()}, 262000);
+  diapCall = setInterval(function(){
+
+      nextImg()
+
+  }, 7000);
+}
+
+function nextImg(){
+  $('.diapositivas')[0].innerHTML = '<img class="diapofoto" src="'+foto[pos%foto.length]+'"></img>'
+  pos++;
+}
+
+function closeDiapo(){
+  music.pause()
+  music.load()
+  pos = 0
+
+  clearInterval(diapCall);
+}
+
+$('#diapo').on('hidden.bs.modal', function (e) {
+  closeDiapo()
+  $('.diapositivas')[0].innerHTML = ''
+  clearInterval(diapCall);
+})
 
 drawCols();
