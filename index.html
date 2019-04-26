@@ -19,12 +19,16 @@
         <div class="col-sm row contain"></div>
       </div>
     </div>
+    <div id="elemAnimation"></div>
     <div class="modal-l"></div>
 
     <div class="modal fade" id="diapo" tabindex="-1" role="dialog" aria-labelledby="diapo" aria-hidden="true">
               <div class="modal-dialog mymodal" role="document">
                 <div class="modal-content mymodal">
-                  <div class="modal-body diapositivas" align="center">
+                  <div class="modal-header closeModal">
+                    <div class="playButtonModal" onclick="closeDiapo()"><i class="fas fa-times"></i></div>
+                  </div>
+                  <div class="modal-body diapositivas mx-auto">
                     <h1 class="initTitle">ALEGRIA</h1>
                   </div>
                 </div>
@@ -35,5 +39,6 @@
       </audio>
     <script src="data.js"></script>
     <script src="tabla.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

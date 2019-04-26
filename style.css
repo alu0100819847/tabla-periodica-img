@@ -1,6 +1,7 @@
 body {
   background-image: url('fondo5.jpg');
   background-size: cover;
+  font-size: 8px;
 }
 
 .contain{
@@ -197,7 +198,7 @@ body {
 }
 
 .masa-atomica{
-  font-size: 6px;
+  font-size: 0.75em;
   width: 100%;
   padding: 0 !important;
   margin-top: 5px;
@@ -205,14 +206,14 @@ body {
 }
 
 .ionizacion{
-  font-size: 4px;
+  font-size: 0.5em;
   margin-left: 2px !important;
 }
 
 .num-atomico{
     margin: 0 !important;
     padding: 0 !important;
-    font-size: 15px
+    font-size: 1.9em;
 }
 
 .elem{
@@ -227,13 +228,13 @@ body {
 }
 
 .simbol{
-  font-size: 17px;
+  font-size: 2em;
   padding: 0 !important;
   display: block;
 }
 
 .name{
-  font-size: 6px;
+  font-size: 0.75em;
   padding: 0 !important;
   display: block;
 }
@@ -242,9 +243,7 @@ body {
   height: 85vh;
 }
 
-.diapofoto{
-  height: 95vh;
-}
+
 .nobut{
   background-color: none;
   border: 0px;
@@ -253,6 +252,7 @@ body {
   width: 100vw;
   margin: 0;
   background-color: black;
+  height: 100vh
 }
 
 .elemfoto{
@@ -301,6 +301,13 @@ body {
   font-size: 20px;
 }
 
+.playButtonModal{
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  width: 20px;
+}
+
 .playButton:hover{
   background-color: #f9fbe769;
   position: absolute;
@@ -308,4 +315,75 @@ body {
   color: white;
   margin: 10px;
   font-size: 30px;
+}
+
+.animationOn {
+  animation-duration: 2s;
+  animation-name: in;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+.tss{
+  animation-play-state: paused;
+}
+
+@keyframes in {
+  from {
+    height: 13vh;
+    width: 10vw;
+  }
+  to {
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    font-size: 70px;
+  }
+}
+
+@keyframes out {
+  from {
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    font-size: 70px;
+  }
+  to {
+    height: 13vh;
+    width: 10vw;
+
+  }
+}
+
+.animed{
+
+  border: 1px solid;
+  height: 13vh;
+  width: 10vw;
+  padding: 5px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 10px;
+}
+
+.diapositivas{
+  width: 90%;
+}
+
+.diapofoto{
+  height: 85vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.closeModal{
+
+    padding-bottom: 0 !important;
+    padding-left: 1rem !important;
+    padding-top: 1rem !important;
+    border: none !important;
 }
