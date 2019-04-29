@@ -31,7 +31,7 @@ function drawCols() {
   $('.modal-l')[0].innerHTML = modal
 
   for(var i = 0; i< $('.modal-img').length; i++){
-    $('.modal-img')[i].innerHTML = '<img class="foto" src="'+foto[i]+'"></img>'
+    $('.modal-img')[i].innerHTML = '<img class="foto" src="./files/img/foto/'+foto[i]+'"></img>'
   }
 }
 
@@ -91,7 +91,7 @@ function createModal(fotoC, elem){
   if(fotoC == foto.length -1) next = 0
   return '<div class="modal fade fotoModal" id="foto-'+fotoC+'" tabindex="-1" role="dialog" aria-labelledby="foto '+fotoC+'" aria-hidden="true">'+
             '<div class="modal-dialog mymodal" role="document">'+
-              '<div class="modal-content mymodal">'+
+              '<div class="modal-content mymodal modal-end">'+
                 '<div class="modal-body modal-img" align="center">'+
                 '</div>'+
                 '<div class="modal-footer">'+
@@ -173,7 +173,7 @@ function playDiapo(){
 
 function nextImg(){
   if(pos < foto.length){
-    $('.diapositivas')[0].innerHTML = '<img class="diapofoto" src="'+foto[pos%foto.length]+'"></img>'
+    $('.diapositivas')[0].innerHTML = '<img class="diapofoto" src="./files/img/foto/'+foto[pos%foto.length]+'"></img>'
     pos++;
   }
 }
