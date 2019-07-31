@@ -1,4 +1,4 @@
-var foto = ['6.jpg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpg', '2.jpeg', '4.jpeg', '6.jpg', '2.jpeg', '5.jpg', '6.jpg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpg', '2.jpeg', '4.jpeg', '6.jpg', '2.jpeg', '5.jpg',]
+var foto = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '30.jpg', '31.jpg', '32.jpg', '34.jpg', '35.jpg', '36.jpg', '37.jpg', '40.jpg', '46.jpg', '48.jpg', '50.jpg', '60.jpg', '61.jpg', '64.jpg', '65.jpg', '70.jpg', '74.jpg', '75.jpg', '76.jpg', '80.jpg']
 var pos = 0;
 var diapCall
 var numFoto = []
@@ -149,26 +149,30 @@ function transition(now, next, elem){
 
 function playDiapo(){
   closed_ = false
-  music.play()
+  //music.play()
   $('.diapositivas')[0].innerHTML = '<h1 class="initTitle">ALEGRIA</h1>'
-  setTimeout(() => {closeDiapo()
+  setTimeout(() => {//closeDiapo()
   console.log('end')}, 262000);
   setTimeout(() => {
+    music.play()
+    console.log(pos)
+    console.log("Posicion final 5")
     if(!closed_){
       $('#diapo').modal('toggle');
       playAnimateOn(pos, numFoto[pos])
       diapCall = setInterval(function(){
         console.log(closed_)
-        if(closed_) clearInterval(diapCall)
+        if(pos >= 39) clearInterval(diapCall)
         else {
           playTransition(pos, pos+1, numFoto[pos+1])
         }
 
-      }, 7000);
+      }, 6600);
     } else {
+      console.log("limpio")
       clearInterval(diapCall)
     }
-  }, 7000);
+  }, 6600);
 }
 
 function nextImg(){
@@ -179,6 +183,8 @@ function nextImg(){
 }
 
 function playAnimateOn(num, elem){
+  console.log(num)
+  console.log(elem)
   $('.animationOut').removeClass("animationOn animationOut")
   if(!closed_){
     $('#elemAnimation')[0].innerHTML = drawCel('animationOn animed '+cels[type[elem]].split(" ")[0], masa[elem], ion[elem], electro[elem], numero[elem], simbol[elem], name[elem])
@@ -187,10 +193,11 @@ function playAnimateOn(num, elem){
     }, 1000);
     setTimeout(() => {
       $('#diapo').modal('toggle');
+      console.log("aqui")
     }, 1500);
     setTimeout(() => {
       $('.animationOn').addClass("tss")
-    }, 2000);
+    }, 1800);
   }
 }
 
@@ -198,14 +205,14 @@ function playAnimateOut(){
     $('.animationOn').removeClass("tss")
     setTimeout(() => {
       $('#elemAnimation')[0].innerHTML = ""
-    }, 1900);
+    }, 1700);
 }
 
 function playTransition(now, next, elem){
     playAnimateOut()
     $('#diapo').modal('toggle');
     setTimeout(() => {
-    playAnimateOn(next, numFoto[next])
+    playAnimateOn(now, numFoto[now])
   }, 2500);
 
 }

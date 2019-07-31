@@ -322,7 +322,7 @@ body {
 }
 
 .animationOn {
-  animation-duration: 2s;
+  animation-duration: 1.8s;
   animation-name: in;
   animation-iteration-count: 2;
   animation-direction: alternate;
